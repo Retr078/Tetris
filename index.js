@@ -7,8 +7,9 @@ const breakSound = document.createElement("audio");
 const drop = document.createElement("audio");
 let rotatedShape;
 
-bgm.setAttribute("src", "./assets/bgm.mp3");
-bgm.muted = true;
+bgm.setAttribute("src", "./assets/Tetris.mp3");
+bgm.loop = true; // Loop the audio
+bgm.muted = false; // Make sure the audio is not muted
 
 breakSound.setAttribute("src", "./assets/break.mp3");
 breakSound.muted = true;
@@ -23,6 +24,11 @@ for (let row = 0; row < BOARD_HEIGHT; row++) {
     board[row][col] = 0;
   }
 }
+
+// Play bgm when the page loads
+window.addEventListener("load", () => {
+  bgm.play();
+});
 
 // Tetrominoes
 const tetrominoes = [
