@@ -1,4 +1,5 @@
 body {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +10,9 @@ body {
 }
 
 
-
+.game_board_wrap {
+    
+}
 
 .text {
     font-family: 'Press Start 2P', cursive;
@@ -19,26 +22,27 @@ body {
     display: flex;
     flex-direction: row;
     position: absolute;
-    margin-top: 700px;
+    text-align: center;
+    margin-top: 650px;
     text-shadow: 5px 4px 4px rgba(0, 0, 0, 0.7);
     /* Adjust the values to your preference */
 }
 
 .logo {
     position: absolute;
-    display: block;
-    margin-top: -140px;
+    margin-top: -560px;
+    margin-left: 5px;
+    height: auto;
+    width: 180px;
 }
 
 #game_board {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    margin-left: -125px;
+    margin-top: -210px;
     width: 240px;
     height: 480px;
     border: 5px solid #3e5eba;
-    position: relative;
+    position: absolute;
     background: repeating-linear-gradient(rgba(22, 28, 67, 0.8), rgba(22, 28, 67, 0.8) 20px, rgba(23, 27, 63, 0.8) 20px, rgba(23, 27, 63, 0.8) 40px), repeating-linear-gradient(90deg, rgba(22, 28, 67, 0.8), rgba(22, 28, 67, 0.8) 20px, rgba(23, 27, 63, 0.8) 20px, rgba(23, 27, 63, 0.8) 40px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
