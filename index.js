@@ -188,6 +188,11 @@ function lockTetromino() {
   // Create a new tetromino
   // Current tetromino
   currentTetromino = randomTetromino();
+  if (!canTetrominoMove(0, 0)) {
+    clearInterval(gameInterval);
+    alert("Game Over");
+    return;
+  }
 }
 
 function clearRows() {
@@ -298,7 +303,7 @@ function moveTetromino(direction) {
 }
 
 drawTetromino();
-setInterval(moveTetromino, 500);
+const gameInterval = setInterval(moveTetromino, 500);
 
 document.addEventListener("keydown", handleKeyPress);
 
@@ -316,7 +321,7 @@ function handleKeyPress(event) {
     case 38: // up arrow
       rotateTetromino();
       break;
-    case 32: // up arrow
+    case 32: // space bar
       dropTetromino();
       break;
     default:
