@@ -72,7 +72,7 @@ const tetrominoes = [
       [0, 0, 6],
       [6, 6, 6],
     ],
-    color: "#ff6400 ",
+    color: "#ff6400",
   },
   { shape: [[7, 7, 7, 7]], color: "#00b5ff" },
 ];
